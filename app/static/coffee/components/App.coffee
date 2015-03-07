@@ -11,7 +11,7 @@ define [
     React.createClass
         render: ->
             <div className="content">
-                <PageHeader>Blaze to Spark</PageHeader>
+                <PageHeader>Blaze Terminal</PageHeader>
                 <Terminal />
                 <AvailableTables url="/data/tables" />
             </div>
