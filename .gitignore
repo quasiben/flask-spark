@@ -6,3 +6,5 @@ node_modules
 .module-cache
 Gruntfile.js
 package.json
+derby.log
+metastore_db/
