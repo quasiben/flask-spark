@@ -1,2 +1,4 @@
 @import '../libs/bootstrap/dist/css/bootstrap.min.css';
 @import '../libs/font-awesome/css/font-awesome.min.css';
+@import '../libs/terminal/css/jquery.terminal.css';
+@import '../libs/datatables/media/css/jquery.dataTables.min.css'
