@@ -7,7 +7,7 @@ define [
     Table = ReactBootstrap.Table
 
     React.createClass
-        componentWillMount: ->
+        componentDidMount: ->
             callback = (data) =>
                 @setState
                     tables: data
@@ -23,9 +23,23 @@ define [
 
         getFullTable: ->
             body = @state.tables.map (row, i) ->
+                rowData = row.dshape.pairs.map (pair, j) ->
+                    data = pair.map (el, k) ->
+                        <td key={k}><code>{el}</code></td>
+                    <tr>{data}</tr>
                 <tr key={i}>
-                    <td key={i}>{row.name}</td>
-                    <td key={i + 1}>{row.dshape}</td>
+                    <td key={i + 1}><code>{row.name}</code></td>
+                    <td key={i + 2}>
+                        <Table>
+                            <thead>
+                                <th>Column</th>
+                                <th>Type</th>
+                            </thead>
+                            <tbody>
+                                {rowData}
+                            </tbody>
+                        </Table>
+                    </td>
                 </tr>
             <Table striped bordered condensed hover>
                 <thead>
@@ -40,7 +54,4 @@ define [
             </Table>
 
         render: ->
-            if not @state.loading then
-                @getFullTable()
-            else
-                <div />
+            if not @state.loading then @getFullTable() else <div />
