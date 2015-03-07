@@ -1,0 +1,26 @@
+{
+  "name": "Blaze Q Expression printer",
+  "version": "0.0.1",
+  "authors": [
+    "Phillip Cloud <phillip.cloud@continuum.io>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "latest",
+    "jquery": "latest",
+    "requirejs": "latest",
+    "react": "latest",
+    "react-bootstrap": "latest",
+    "coffee-script": "latest",
+    "font-awesome": "latest",
+    "datatables": "latest"
+  }
+}
