@@ -1,0 +1,5 @@
+@import '../libs/bootstrap/dist/css/bootstrap.min.css';
+@import '../libs/font-awesome/css/font-awesome.min.css';
+@import '../libs/datatables/media/css/jquery.dataTables.min.css';
+
+@import 'styles.css';
