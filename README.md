@@ -8,7 +8,7 @@
 
 * install npm
 
-* install bower from npm
+* install bower and coffee-react from npm
 ```sh
 npm install -g bower
 npm install -g coffee-react
@@ -33,6 +33,17 @@ conda install -c blaze blaze
 
 Fire up IPython and start a blaze server
 ```python
+In [2]: import pandas as pd
+
+In [3]: import numpy as np
+
+In [4]: df = pd.DataFrame({'a': np.random.randn(1000),
+   ...:                    'b': np.random.randint(0, 10, size=1000)})
+   ...:
+
+In [5]: from blaze import Server
+
+In [6]: Server({'db': df}).run(host='127.0.0.1', port=6363)  # <- blocks
 ```
 
 Fire up two more terminals
